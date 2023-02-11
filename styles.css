@@ -158,9 +158,9 @@ section {
 }
 
 div.wide-fit {
-  margin-left: -40px;
-  margin-right: -40px;
-  padding: 20px 60px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px 20px;
   border-radius: 0;
 }
 div.wide-fit{
@@ -187,8 +187,13 @@ div.wide-fit{
 
 /* Crests */
 .crests{
-  width: 100%;
-  max-height: 50px;
+  width: 100px;
+  max-height: 55px ;
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+}
+.crests.villa{
 }
 
 /* Button */
@@ -405,6 +410,9 @@ nav > ul {
   height: 100%;
   margin: 0.2rem 0.2rem;
   padding: 0px 20px;
+}
+footer{
+  padding-bottom: 30px;
 }
   }
 
