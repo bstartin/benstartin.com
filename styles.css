@@ -158,7 +158,7 @@ margin-right: 4px;
 }
 
 header {
-  width: 95%;
+  width: 100%;
   align-items: center;
   height: 60px;
   background-color: var(--color3);
@@ -167,10 +167,13 @@ header {
   position: -webkit-sticky;
   justify-content: space-between;
   top: 0;
+  /* Fonts 
+
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 0 0 15px 15px;
   margin-left: 2.5%;
+  */
 
 }
 footer {
@@ -325,6 +328,7 @@ h1.hero{
   font-weight: 800;
   font-family: var(--hero-font), sans-serif;
   color: var(--font-dark);
+  margin: auto;
 }
 
 h2.hero{
@@ -332,7 +336,6 @@ h2.hero{
   font-weight: 100;
   font-family: var(--hero-sub-font), sans-serif;
   color: var(--font-dark);
-
 }
 
 .row.wide-hero {
