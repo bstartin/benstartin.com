@@ -9,7 +9,7 @@
   --common-font: 'Arial', Courier;
   --hero-font: Courier;
   --hero-sub-font: 'Arial', Courier;
-  --header-font: 'Arial', Courier;
+  --header-font: Courier;
   --paragraph-font: 'Arial', Courier;
   --footer-font: Courier;
 
@@ -20,7 +20,25 @@
 }
 
 /* Fonts */
-h1, h2, h3, h4, h5, h6{
+h1 {
+  font-family: var(--header-font);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-family: var(--header-font);
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h4, h5, h6{
   font-family: var(--header-font);
   font-weight: 800;
 }
@@ -32,22 +50,46 @@ p{
   font-weight: 200;
 }
 
+a{
+  font-family: var(--header-font);
+  color: var(--font-dark);
+}
+
+ol{
+  font-family: var(--header-font);
+}
+ul{
+  font-family: var(--header-font);
+}
+.small{
+  font-size: 0.9rem;
+}
+
 .courier{
   font-family: var(--footer-font);
+}
+
+code{
+  padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: inline-block;
 }
 
 hr{
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(120, 120, 120, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  
 }
 
 blockquote{
-  font-family: var(--paragraph-font);
+  font-family: var(--header-font);
   font-size: 1.4rem;
   line-height: 1.2;
-  font-weight: 200;
-  margin: 5% 10%;
+  font-weight: 400;
+  margin: 0% 10%;
 }
 .blockquote-title{
   font-family: var(--footer-font);
@@ -135,7 +177,7 @@ nav a {
 .nav-icon{
   align-self: center;
   text-decoration: none;
-
+  font-weight: 800;
 }
 
 .nav-link {
@@ -163,8 +205,8 @@ header {
   height: 60px;
   background-color: var(--color3);
   display: flex;
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   justify-content: space-between;
   top: 0;
 }
@@ -222,8 +264,8 @@ div.wide-fit{
   background-color: #ffffff;
   border-top: 5px solid var(--color3); 
   text-align: center;
-  margin-bottom: ;
 }
+
 /* Info Cards */ 
 
 .card {
@@ -239,7 +281,6 @@ div.wide-fit{
 
 }
 
-
 /* Crests */
 .crests{
   width: 100px;
@@ -247,8 +288,6 @@ div.wide-fit{
   vertical-align: middle;
   display: inline-block;
   height: 100%;
-}
-.crests.villa{
 }
 
 /* Button */
@@ -291,6 +330,7 @@ div.wide-fit{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0% 10%;
 }
 
 .col {
@@ -511,5 +551,12 @@ nav > ul > li {
 blockquote{
   margin: 5% 5%;
 }
-  }
+
+/* Responsive Grid */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0% 1%;
+}
 
