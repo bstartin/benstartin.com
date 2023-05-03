@@ -1,4 +1,4 @@
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("bundle.css");
-    config.addPassthroughCopy("src/CNAME");
+    eleventyConfig.addPassthroughCopy("src/CNAME");
   };
