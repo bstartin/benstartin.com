@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="To deploy an Eleventy website to GitHub Pages, you can follow these steps...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deploying an Eleventy website to github pages | benstartin.com</title>
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+  <body>
+    <header>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
+    </span>
+<nav id="navbar">
+  <ul>
+    <li><a href="/posts" class="nav-link" >Posts</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link" rel="noopener">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+<main>
+<section>
+  <div class="row">
+    <div class="col col-span-6">
+    
+    <p class="small"><a href="/">< back</a></p>
+    <p><span class="courier small">2023-05-16</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: posteleventy</span>---></p>
+    <h1 class="post-margin">Deploying an Eleventy website to github pages</h1>
+    <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
+    <p><p>To deploy an Eleventy website to GitHub Pages, you can follow these steps:</p>
+<h4>Step 1: Prepare your Eleventy project</h4>
+<ol>
+<li>
+<p>Make sure your Eleventy project is set up and working correctly on your local machine. You should have your Eleventy site's source files ready.</p>
+</li>
+<li>
+<p>Create a new branch in your Git repository specifically for deploying to GitHub Pages. You can name it something like &quot;gh-pages&quot; or &quot;deploy&quot;.</p>
+</li>
+</ol>
+<h4>Step 2: Configure Eleventy for GitHub Pages</h4>
+<ol>
+<li>
+<p>Open the <code>.eleventy.js</code> configuration file in your project's root directory.</p>
+</li>
+<li>
+<p>Add the following code at the end of the file to set the output directory to a specific folder named &quot;docs&quot;:</p>
+</li>
+</ol>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+  // Existing configuration...
+
+  return {
+    dir: {
+      output: &quot;docs&quot;,
+    },
+  };
+};
+</code></pre>
+<p>This step is necessary because GitHub Pages looks for the <code>index.html</code> file in the &quot;docs&quot; folder by default.</p>
+<ol start="3">
+<li>Commit and push the changes to the branch you created earlier.</li>
+</ol>
+<h4>Step 3: Deploy to GitHub Pages</h4>
+<ol>
+<li>
+<p>Go to your GitHub repository's settings page.</p>
+</li>
+<li>
+<p>Scroll down to the &quot;GitHub Pages&quot; section.</p>
+</li>
+<li>
+<p>Under the &quot;Source&quot; heading, select the branch you created earlier (e.g., &quot;gh-pages&quot; or &quot;deploy&quot;).</p>
+</li>
+<li>
+<p>Choose the &quot;root&quot; directory option.</p>
+</li>
+<li>
+<p>Click &quot;Save&quot; or &quot;Apply&quot; to save the changes.</p>
+</li>
+</ol>
+<h4>Step 4: Push your Eleventy project to the deployment branch</h4>
+<ol>
+<li>Push the entire content of your Eleventy project (including the updated configuration) to the branch you selected for deployment.</li>
+</ol>
+<h4>Step 5: Verify and view your deployed site</h4>
+<ol>
+<li>
+<p>After pushing your changes, wait for a few moments for GitHub Pages to build and deploy your site. You can check the deployment status under the &quot;GitHub Pages&quot; section of your repository settings.</p>
+</li>
+<li>
+<p>Once the deployment is complete, you can access your deployed Eleventy website at the URL provided in the &quot;GitHub Pages&quot; section.</p>
+</li>
+</ol>
+<p>That's it! Your Eleventy website should now be successfully deployed to GitHub Pages. Any subsequent updates pushed to the deployment branch will trigger a rebuild of your site on GitHub Pages.</p>
+</p>
+   </div> 
+  </div> 
+</section>
+</main>
+
+<footer id="contact">
+  <div class="row center">
+    <h4 class="courier">Get in contact. </h4>
+	  <ul>
+      <li><a class="nav-link" href="mailto:ben.startin@gmail.com?subject=Hi, just getting in contact">Email Me</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://github.com/bstartin" target="_blank">Github</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/bstartin/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>      
+  </body>
+</html>

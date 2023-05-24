@@ -1,6 +1,7 @@
 ---
-layout: post-layout.html
-title: About.
+layout: content-page.html
+title: About
+description: heres a bit of information about Ben Startin
 ---
 I'm a SAFe & CSPO qualified digital product owner, with over 10 years digital experience in both agecny and client side settings. 
 

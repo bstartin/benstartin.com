@@ -23,13 +23,17 @@
 h1 {
   font-family: var(--header-font);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 3.4rem;
 }
 
 h2 {
   font-family: var(--header-font);
   font-weight: 800;
   font-size: 2.2rem;
+}
+
+h1.post-margin{
+  margin-top: 0%;
 }
 
 h3 {
@@ -65,23 +69,50 @@ ul{
   font-size: 0.9rem;
 }
 
+.post{
+  width: 75%;
+  align-content: center;
+  padding-bottom: 20%;
+}
+
+img{
+  max-width: 100%;
+}
+
 .courier{
   font-family: var(--footer-font);
 }
 
-code{
+/* Code blocks */
+pre{
   padding: 20px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    display: inline-block;
+  border-radius: 5px;
+  background-color: #ededed;
+  display: inline-block;
+}
+
+code{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ededed;
+  display: inline-block;
+  font-size: .8rem;
+}
+
+.tags{
+  border: var(--color4) 1px solid;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: .8rem;
+  color: var(--color4);
+  background-color: var(--color3);
 }
 
 hr{
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(120, 120, 120, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  
+  width: 60%;
 }
 
 blockquote{
@@ -387,7 +418,7 @@ h2.hero{
 
 .row.wide-hero.hero{
   margin-top: 0;
-  height: 100vh;
+  height: 85vh;
 }
 
 .row.wide-hero.hero > .hero-content{
@@ -566,4 +597,8 @@ blockquote{
   flex-wrap: wrap;
   margin: 0% 1%;
 }
-
+.post{
+  width: 100%;
+  align-content: center;
+  padding-bottom: 20%;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Hi i'm Ben Startin, a Birmingham based product owner.">
+    <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ title }} | benstartin.com</title>
@@ -11,7 +11,7 @@
 </head>
   <body>
     <header>
-      <a href="/" class="nav-icon"><img src="" id="header-img"><span id="logo"></a>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
     </span>
 <nav id="navbar">
   <ul>
@@ -28,9 +28,16 @@
     <div class="col col-span-6">
     
     <p class="small"><a href="/">< back</a></p>
-    <h1>{{ title | default: "Latest Posts..." }}</h1>
-    <p class="courier">{{ date }}</p>
+    <p><span class="courier small">{{ date }}</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: {{ tags }}</span>---></p>
+    <h1 class="post-margin">{{ title | default: "Latest Posts..." }}</h1>
+    {{ image }}
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
     <p>{{ content }}</p>
+   </div> 
+  </div> 
 </section>
 </main>
 

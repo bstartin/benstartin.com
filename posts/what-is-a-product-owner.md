@@ -1,7 +1,9 @@
 ---
-layout: post-layout.html
-title: What it is to be a product owner, according to Chat-GPT 
-date: "2023-05-01"
+title: What is a product owner, according to Chat-GPT 
+date: "2023-04-29"
+tags: ['product', 'product manager', 'product owner']
+description: this a description of what the product owner role is accroding to Chat-GPT 
+image: <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
 ---
 As a product owner, your role is to define, prioritize, and manage the development of a product that meets the needs of your users. In today's digital age, this means that product owners must have a deep understanding of how technology works and how it can be leveraged to create innovative solutions.
 

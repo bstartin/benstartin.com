@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="How to create a componet which displays the latest 5 posts from your Eleventy website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create a componet which shows the latest five Eleventy posts | benstartin.com</title>
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+  <body>
+    <header>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
+    </span>
+<nav id="navbar">
+  <ul>
+    <li><a href="/posts" class="nav-link" >Posts</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link" rel="noopener">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+<main>
+<section>
+  <div class="row">
+    <div class="col col-span-6">
+    
+    <p class="small"><a href="/">< back</a></p>
+    <p><span class="courier small">2023-05-22</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: posteleventy</span>---></p>
+    <h1 class="post-margin">Create a componet which shows the latest five Eleventy posts</h1>
+    <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
+    <p><p>To display only the latest 5 posts in Eleventy, you can make use of the <code>limit</code> filter to limit the number of posts displayed. Here's an example of how you can accomplish this:</p>
+<p>In your template file:</p>
+<pre><code>{ assign latest_posts = collections.posts | reverse }
+{ for post in latest_posts limit:5 }
+  &lt;!-- Render your post here --&gt;
+{ endfor }
+</code></pre>
+<p>In this example, <code>collections.posts</code> represents the collection of posts in your Eleventy project. The <code>reverse</code> filter is used to reverse the order of the posts so that the latest posts appear first. Then, the <code>limit</code> filter is applied to the collection to extract a subset of 5 posts starting from index 0.</p>
+<p>You'll also need to drop in the <code>%</code> so that it will work in your template file.</p>
+<p>By using this code snippet, you'll only display the latest 5 posts from the collection. Adjust the <code>collections.posts</code> part to match the actual collection you have defined in your Eleventy configuration or template files.</p>
+<p>Make sure to place this code in the appropriate template file where you want to display the limited number of latest posts.</p>
+</p>
+   </div> 
+  </div> 
+</section>
+</main>
+
+<footer id="contact">
+  <div class="row center">
+    <h4 class="courier">Get in contact. </h4>
+	  <ul>
+      <li><a class="nav-link" href="mailto:ben.startin@gmail.com?subject=Hi, just getting in contact">Email Me</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://github.com/bstartin" target="_blank">Github</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/bstartin/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>      
+  </body>
+</html>

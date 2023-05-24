@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="To create a simple Eleventy blog website, you can follow these steps...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to build a simple Eleventy blog site | benstartin.com</title>
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+  <body>
+    <header>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
+    </span>
+<nav id="navbar">
+  <ul>
+    <li><a href="/posts" class="nav-link" >Posts</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link" rel="noopener">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+<main>
+<section>
+  <div class="row">
+    <div class="col col-span-6">
+    
+    <p class="small"><a href="/">< back</a></p>
+    <p><span class="courier small">2023-05-12</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: posteleventy</span>---></p>
+    <h1 class="post-margin">How to build a simple Eleventy blog site</h1>
+    <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
+    <p><p>Being honest I got AI to write this so that I have content to test out on the site. Elevetny is really easy to use, I orginally built this site in HTML &amp; CSS and then recomplied it all using Eleventy so that its would have a blog.</p>
+<p>The best way to work out how to create an Eleventy site just watch this youtube video : <a href="https://www.youtube.com/watch?v=kzf9A9tkkl4">6 Minutes to Build a Blog from Scratch with Eleventy</a></p>
+<p>But if you wantt to read on, to create an Eleventy website, you can follow these steps:</p>
+<p>Step 1: Set up the project</p>
+<ol>
+<li>
+<p>Create a new directory for your Eleventy blog project.</p>
+</li>
+<li>
+<p>Open a command prompt or terminal and navigate to the project directory.</p>
+</li>
+<li>
+<p>Initialize a new Node.js project by running the following command:</p>
+<pre><code>npm init -y
+</code></pre>
+</li>
+<li>
+<p>Install Eleventy as a development dependency by running the following command:</p>
+<pre><code>npm install --save-dev eleventy
+</code></pre>
+</li>
+</ol>
+<p>Step 2: Configure Eleventy</p>
+<ol>
+<li>
+<p>Create a new file named <code>.eleventy.js</code> in the root directory of your project.</p>
+</li>
+<li>
+<p>Add the following code to the <code>.eleventy.js</code> file to configure Eleventy:</p>
+</li>
+</ol>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy(&quot;assets&quot;); // Copies the &quot;assets&quot; folder to the output directory
+
+  return {
+    dir: {
+      input: &quot;src&quot;, // Directory where your source files are located
+      output: &quot;dist&quot;, // Directory where the generated site will be outputted
+    },
+  };
+};
+</code></pre>
+<ol start="3">
+<li>Create a new folder named <code>src</code> in the root directory of your project. This folder will contain your site's source files.</li>
+</ol>
+<p>Step 3: Create the blog posts</p>
+<ol>
+<li>
+<p>Inside the <code>src</code> folder, create a new folder named <code>_posts</code>.</p>
+</li>
+<li>
+<p>Create a new Markdown or HTML file for each blog post in the <code>_posts</code> folder. Name the files using the following format: <code>YYYY-MM-DD-post-slug.md</code> (e.g., <code>2023-01-01-my-first-post.md</code>).</p>
+</li>
+<li>
+<p>Add the necessary content to each blog post file using Markdown or HTML syntax.</p>
+</li>
+</ol>
+<p>Step 4: Create the blog layout</p>
+<ol>
+<li>
+<p>Inside the <code>src</code> folder, create a new file named <code>index.njk</code>. This will be the layout file for your blog.</p>
+</li>
+<li>
+<p>Add the following content to the <code>index.njk</code> file as a basic example:</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Step 5: Build and view your blog</p>
+<ol>
+<li>
+<p>Open a command prompt or terminal and navigate to the root directory of your project.</p>
+</li>
+<li>
+<p>Run the following command to build your Eleventy site:</p>
+<pre><code>npx eleventy
+</code></pre>
+<p>This command will generate your blog as HTML files and output them to the <code>dist</code> directory (or the directory specified in the configuration).</p>
+</li>
+<li>
+<p>After the build process completes, you can preview your blog by opening the generated HTML files in a web browser.</p>
+</li>
+</ol>
+<p>That's it! You now have a simple blog built with Eleventy. You can further customize your blog's layout, add CSS styles, and explore Eleventy's features to enhance your blog's functionality.</p>
+</p>
+   </div> 
+  </div> 
+</section>
+</main>
+
+<footer id="contact">
+  <div class="row center">
+    <h4 class="courier">Get in contact. </h4>
+	  <ul>
+      <li><a class="nav-link" href="mailto:ben.startin@gmail.com?subject=Hi, just getting in contact">Email Me</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://github.com/bstartin" target="_blank">Github</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/bstartin/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>      
+  </body>
+</html>

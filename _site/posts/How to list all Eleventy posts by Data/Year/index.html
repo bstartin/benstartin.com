@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="How to list all Eleventy posts by month and placing older months at the bottom of the list">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to list all Eleventy posts by Data/Year | benstartin.com</title>
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+  <body>
+    <header>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
+    </span>
+<nav id="navbar">
+  <ul>
+    <li><a href="/posts" class="nav-link" >Posts</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link" rel="noopener">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+<main>
+<section>
+  <div class="row">
+    <div class="col col-span-6">
+    
+    <p class="small"><a href="/">< back</a></p>
+    <p><span class="courier small">2023-05-21</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: posteleventy</span>---></p>
+    <h1 class="post-margin">How to list all Eleventy posts by Data/Year</h1>
+    <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
+    <p><p>This was provided by Chat-GPT and is really usful if you want to show all your posts by month and placing older months at the bottom of the list.</p>
+<p>To sort and group posts by month in Eleventy while displaying the latest posts first within each month and placing older months at the bottom of the list, you can modify the previous example by reversing the order of the generated month groups. Here's an updated version of the code:</p>
+<ol>
+<li>Create a custom Liquid filter to extract the month and year from the post's date:</li>
+</ol>
+<pre><code class="language-javascript">// .eleventy.js
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter(&quot;getMonthYear&quot;, function(date) {
+    const options = { month: &quot;long&quot;, year: &quot;numeric&quot; };
+    return date.toLocaleDateString(&quot;en-US&quot;, options);
+  });
+};
+</code></pre>
+<ol start="2">
+<li>Create a custom data transformation to sort and group posts by month:</li>
+</ol>
+<pre><code class="language-javascript">// .eleventy.js
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addCollection(&quot;postsByMonth&quot;, function(collection) {
+    const postsByMonth = {};
+
+    for (const post of collection.getFilteredByTag(&quot;posts&quot;)) {
+      const monthYear = post.date.toLocaleDateString(&quot;en-US&quot;, { month: &quot;long&quot;, year: &quot;numeric&quot; });
+
+      if (!postsByMonth[monthYear]) {
+        postsByMonth[monthYear] = [];
+      }
+
+      postsByMonth[monthYear].push(post);
+    }
+
+    // Sort posts within each month in reverse chronological order
+    for (const monthPosts of Object.values(postsByMonth)) {
+      monthPosts.sort((a, b) =&gt; b.date - a.date);
+    }
+
+    const sortedMonths = Object.entries(postsByMonth).sort(([a], [b]) =&gt; {
+      const [aMonth, aYear] = a.split(&quot; &quot;);
+      const [bMonth, bYear] = b.split(&quot; &quot;);
+      const aDate = new Date(`${aMonth} 1, ${aYear}`);
+      const bDate = new Date(`${bMonth} 1, ${bYear}`);
+      return bDate - aDate;
+    });
+
+    return sortedMonths.map(([monthYear, posts]) =&gt; ({
+      monthYear,
+      posts
+    }));
+  });
+};
+</code></pre>
+<ol start="3">
+<li>In your template file, access the sorted and grouped posts:</li>
+</ol>
+<pre><code class="language-liquid">
+  &lt;h2&gt;April 2023&lt;/h2&gt;
+  
+    &lt;!-- Render your post here --&gt;
+  
+
+  &lt;h2&gt;May 2023&lt;/h2&gt;
+  
+    &lt;!-- Render your post here --&gt;
+  
+    &lt;!-- Render your post here --&gt;
+  
+    &lt;!-- Render your post here --&gt;
+  
+    &lt;!-- Render your post here --&gt;
+  
+
+</code></pre>
+<p>In this updated example, after grouping the posts by month and sorting them within each month in reverse chronological order, the generated month groups are reversed using the <code>reversed</code> keyword. This places older months at the bottom of the list.</p>
+<p>Adjust the <code>collections.posts</code> part to match the actual collection you have defined in your Eleventy configuration or template files.</p>
+<p>Remember to include the custom filter and data transformation code in your <code>.eleventy.js</code> configuration file, and place the template code in the appropriate template file where you want to display the sorted and grouped posts, with the latest posts appearing first within each month and older months at the bottom of the list.</p>
+</p>
+   </div> 
+  </div> 
+</section>
+</main>
+
+<footer id="contact">
+  <div class="row center">
+    <h4 class="courier">Get in contact. </h4>
+	  <ul>
+      <li><a class="nav-link" href="mailto:ben.startin@gmail.com?subject=Hi, just getting in contact">Email Me</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://github.com/bstartin" target="_blank">Github</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/bstartin/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>      
+  </body>
+</html>

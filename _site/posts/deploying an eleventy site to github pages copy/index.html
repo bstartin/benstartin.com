@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="How to build a eleventy site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deploying an eleventy site to github pages | benstartin.com</title>
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+  <body>
+    <header>
+      <a href="/" class="nav-icon"><span id="logo" alt="benstartin.com logo"></a>
+    </span>
+<nav id="navbar">
+  <ul>
+    <li><a href="/posts" class="nav-link" >Posts</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link" rel="noopener">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+<main>
+<section>
+  <div class="row">
+    <div class="col col-span-6">
+    
+    <p class="small"><a href="/">< back</a></p>
+    <p><span class="courier small">2023-05-21</span> <!--- &nbsp;&nbsp;<span class=" courier">~ tags: posteleventy</span>---></p>
+    <h1 class="post-margin">Deploying an eleventy site to github pages</h1>
+    <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
+   </div> 
+  </div> 
+  <div class="row center">
+   <div class="post">
+    <p><p>To create an Eleventy website, you can follow these steps:</p>
+<p>Step 1: Set up a Project</p>
+<ol>
+<li>
+<p>Ensure that Node.js is installed on your computer. You can download and install it from the official Node.js website (https://nodejs.org).</p>
+</li>
+<li>
+<p>Open a command prompt or terminal and create a new directory for your project. Navigate to the directory using the <code>cd</code> command.</p>
+</li>
+<li>
+<p>Initialize a new Node.js project by running the following command:</p>
+<pre><code>npm init -y
+</code></pre>
+</li>
+<li>
+<p>Install Eleventy as a development dependency by running the following command:</p>
+<pre><code>npm install --save-dev eleventy
+</code></pre>
+</li>
+<li>
+<p>Create a new file named <code>.eleventy.js</code> in the root directory of your project. This file will be used for Eleventy's configuration.</p>
+</li>
+</ol>
+<p>Step 2: Configure Eleventy</p>
+<p>In the <code>.eleventy.js</code> file, you can configure various settings for your Eleventy website. Here's an example configuration that you can modify to suit your needs:</p>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy(&quot;assets&quot;); // Copies the &quot;assets&quot; folder to the output directory
+
+  return {
+    dir: {
+      input: &quot;src&quot;, // Directory where your source files are located
+      output: &quot;dist&quot;, // Directory where the generated site will be outputted
+    },
+  };
+};
+</code></pre>
+<p>Step 3: Create Your Site Content</p>
+<ol>
+<li>
+<p>Create a new folder named <code>src</code> in the root directory of your project. This folder will contain your site's source files.</p>
+</li>
+<li>
+<p>Add Markdown or HTML files to the <code>src</code> folder to create your site's content. You can organize the files into subdirectories as needed.</p>
+</li>
+</ol>
+<p>Step 4: Build and Preview Your Site</p>
+<ol>
+<li>
+<p>Open a command prompt or terminal and navigate to the root directory of your project.</p>
+</li>
+<li>
+<p>Run the following command to build your Eleventy site:</p>
+<pre><code>npx eleventy
+</code></pre>
+<p>This command will generate your site's HTML files and output them to the <code>dist</code> directory (or the directory specified in the configuration).</p>
+</li>
+<li>
+<p>After the build process completes, you can preview your site locally. You can use a static file server like <code>http-server</code> or <code>live-server</code> to serve the files. Alternatively, you can open the HTML files directly in your web browser.</p>
+</li>
+</ol>
+<p>Step 5: Customize and Enhance</p>
+<p>You can customize your Eleventy website further by exploring the available features and plugins. Eleventy supports various templating languages, filters, and plugins to extend its functionality. Refer to the Eleventy documentation (https://www.11ty.dev/docs/) for more information and examples.</p>
+<p>Remember to configure your project's Git repository, set up deployment options, and add any necessary styling or assets to make your Eleventy website complete.</p>
+</p>
+   </div> 
+  </div> 
+</section>
+</main>
+
+<footer id="contact">
+  <div class="row center">
+    <h4 class="courier">Get in contact. </h4>
+	  <ul>
+      <li><a class="nav-link" href="mailto:ben.startin@gmail.com?subject=Hi, just getting in contact">Email Me</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://github.com/bstartin" target="_blank">Github</a></li>
+      <li>&nbsp; - &nbsp; </li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/bstartin/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>      
+  </body>
+</html>
