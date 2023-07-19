@@ -3,7 +3,6 @@ title: How to build a simple Eleventy blog site
 date: "2023-05-12"
 tags: ['eleventy',]
 description: To create a simple Eleventy blog website, you can follow these steps...
-image: <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
 ---
 Being honest I got AI to write this so that I have content to test out on the site. Elevetny is really easy to use, I orginally built this site in HTML & CSS and then recomplied it all using Eleventy so that its would have a blog.
 

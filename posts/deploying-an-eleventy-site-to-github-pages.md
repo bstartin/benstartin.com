@@ -3,7 +3,6 @@ title: Deploying an Eleventy website to github pages
 date: "2023-05-16"
 tags: ['eleventy',]
 description: To deploy an Eleventy website to GitHub Pages, you can follow these steps...
-image: <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
 ---
 To deploy an Eleventy website to GitHub Pages, you can follow these steps:
 

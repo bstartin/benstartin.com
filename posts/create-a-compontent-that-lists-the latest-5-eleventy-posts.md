@@ -1,9 +1,8 @@
 ---
-title: Create a componet which shows the latest five Eleventy posts
+title: Create a component which shows the latest five Eleventy posts
 date: "2023-05-22"
 tags: ['eleventy',]
 description: How to create a componet which displays the latest 5 posts from your Eleventy website
-image: <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
 ---
 To display only the latest 5 posts in Eleventy, you can make use of the `limit` filter to limit the number of posts displayed. Here's an example of how you can accomplish this:
 

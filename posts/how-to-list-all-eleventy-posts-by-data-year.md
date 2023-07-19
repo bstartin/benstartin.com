@@ -3,7 +3,6 @@ title: How to list all Eleventy posts by Data/Year
 date: "2023-05-21"
 tags: ['eleventy',]
 description: How to list all Eleventy posts show all your posts by month & year
-image: <img src="https://placehold.co/1000x400" alt="the usual accessibilty stuff here!">
 ---
 This was provided by Chat-GPT and is really usful if you want to show all your posts by month & year.
 
