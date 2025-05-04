@@ -1,0 +1,7 @@
+# Ignore specific files
+src/components/header.partial.html
+src/components/footer.partial.html
+
+# Ignore entire directories
+node_modules/
+dist/

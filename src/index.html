@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" html data-theme="startin-theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Startin - Product Manager</title>
+  <meta name="description" content="A brief description of the webpage">
+  <link rel="stylesheet" href="/styles/index.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <!-- Header -->
+    <div id="header"></div>
+  <main>
+    <!-- Hero -->
+    <div class="hero bg-base-200 min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-xl">
+          <h1 class="hero">Hey there 👋</h1>
+          <p class="hero">
+            I'm Ben, a Birmingham based digital product manager, who's worked across automotive, retail, sports & telecoms industries.
+          </p>
+          <div class="py-8">
+            <a href="/posts/"><button class="btn btn-primary py-4 ">Read my posts</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Links to Calculators -->   
+<div class="mx-auto max-w-2xl mt-10 mb-5">
+  <div class="indicator">
+  <div class="indicator-item indicator-bottom">
+    <a href="#"><button class="btn btn-success">Try now</button></a>
+  </div>
+  <div class="card border-base-300 border shadow-sm">
+    <div class="card-body">
+      <p class="prose">Looking for help with backlog prioritisation - try my <a href="#">RICE</a> & <a href="#">WSJF</a> calculators </p>
+    </div>
+  </div>
+</div></div>
+
+<!-- Latest 3 Posts Links -->
+<container class="mr-3 ml-3">
+<div class="max-w-3xl mx-auto mb-10 ">
+  <h2>Latest posts</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-3">
+    <!-- Newest Post -->
+    {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
+    {% if newestPost %}
+      <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
+        <figure>
+          <img
+            src="{{ newestPost.data.image | default: 'https://placehold.co/600x400' }}"
+            alt="{{ newestPost.data.title }}" />
+        </figure>
+        <div class="card-body">
+          <h4 class="card-title text-lg">{{ newestPost.data.title }}</h4>
+          <span class="text-gray-500 text-xs">{{ newestPost.date | date: "%B %d, %Y" }}</span>
+          <p>{{ newestPost.data.description }}</p>
+          <div class="justify-start card-actions">
+            <a href="{{ newestPost.url }}"><button class="btn btn-outline">Read post</button></a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+      <!-- 2nd Newest Post -->
+      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign secondNewestPost = sortedPosts[1] %}
+      {% if secondNewestPost %}
+        <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
+          <figure>
+            <img
+              src="{{ secondNewestPost.data.image | default: 'https://placehold.co/600x400' }}"
+              alt="{{ secondNewestPost.data.title }}" class="mask-linear-50"/>
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">{{ secondNewestPost.data.title }}</h4>
+            <span class="text-gray-500 text-xs">{{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
+            <p>{{ secondNewestPost.data.description }}</p>
+            <div class="justify-start card-actions">
+              <a href="{{ secondNewestPost.url }}"><button class="btn btn-outline">Read post</button></a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- 3rd Newest Post -->
+      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign thirdNewestPost = sortedPosts[2] %}
+      {% if thirdNewestPost %}
+        <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
+          <figure>
+            <img
+              src="{{ thirdNewestPost.data.image | default: 'https://placehold.co/600x400' }}"
+              alt="{{ thirdNewestPost.data.title }}" />
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">{{ thirdNewestPost.data.title }}</h4>
+            <span class="text-gray-500 text-xs">{{ thirdNewestPost.date | date: "%B %d, %Y" }}</span>
+            <p>{{ thirdNewestPost.data.description }}</p>
+            <div class="justify-start card-actions">
+              <a href="{{ thirdNewestPost.url }}"><button class="btn btn-outline">Read post</button></a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+        </div>
+        <div class="py-8 text-center">
+          <a href="/posts/"><button class="btn py-4 ">View all posts</button></a>
+        </div>
+</div>
+      
+
+
+
+</div>
+        <!-- Content section -->
+      </container>
+      </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="/scripts/script.js"></script>
+
+</body>
+</html>

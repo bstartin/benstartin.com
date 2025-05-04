@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="startin-theme-light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Ben Startin</title>
+    <meta name="description" content="{{ description }}">
+
+    <link rel="stylesheet" href="/styles/index.css">
+  </head>
+  <body>
+   <!-- Header -->
+<nav><div id="header"></div>
+</nav>
+<!-- Main Content -->    
+<main class="ml-3 mr-3">
+  <div class="max-w-3xl mx-auto pt-20 mb-15">
+    <div class="breadcrumbs max-w-3xl text-sm">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts">All posts</a></li>
+        <li>{{ title }}</li>
+      </ul>
+    </div>
+
+      <article class="prose prose-lg pt-10">
+        <h1 class="post">{{ title }}</h1>
+        <hr class="max-w-xs text-gray-100">
+      {{ content }}
+      </article>   
+  </div>
+</main>
+    <!-- Footer -->
+  <div id="footer"></div>
+  <script src="/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+---
+pagination:
+  data: collections.posts
+  size: 4
+  alias: posts
+  permalink: /posts{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/
+  pagination.first: /posts/
+---
+
+<!doctype html>
+<html lang="en" data-theme="startin-theme-light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts - Ben Startin</title>
+    <meta name="description" content="A brief description of the webpage">
+    <link rel="stylesheet" href="/styles/index.css">
+  </head>
+  <body>
+  <nav>
+    <div id="header"></div>
+</nav>
+  <main class="ml-3 mr-3">  
+    <div class="max-w-2xl pt-20 mx-auto">
+        <div class="breadcrumbs text-sm">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">All posts</a></li>
+          {% if pagination.pageNumber > 0 %}
+          <li><a href="#"> Page {{ pagination.pageNumber }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      </div>
+    <div class="max-w-2xl mx-auto mt-10 mb-15">
+        <!-- All Posts -->
+      <h2 class="text-3xl font-bold mb-5">All posts</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+        {% for post in posts %}
+      <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-3">
+      {% if post.data.image %}
+  <figure>
+    <img
+      src="{{ post.data.image }}"
+      alt="{{ post.data.title }}"
+      class="mask-linear-50" />
+  </figure>
+{% endif %}
+        <div class="card-body">
+          <h4 class="card-title">{{ post.data.title }}</h4>
+          <span class="text-gray-500 text-xs">{{ post.date | date: "%B %d, %Y" }}</span>
+          <p>{{ post.data.description }}</p>
+          <div class="justify-start card-actions">
+            <a href="{{ post.url }}"><button class="btn">Read post</button></a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      </div>
+    <!-- Pagination -->
+        <div class="join grid grid-cols-2 mt-5">
+  <!-- <a href="{{ pagination.previousPageUrl }}" class="join-item btn btn-outline {% if not pagination.previousPageUrl %}btn-disabled{% endif %}">
+    < Previous
+  </a> -->
+  {% assign previousPageIndex = pagination.pageNumber | minus: 1 %}
+{% if previousPageIndex >= 0 %}
+  <a href="{{ pagination.hrefs[previousPageIndex] }}" class="join-item btn btn-outline">
+    < Previous page <!-- {{ pagination.pageNumber | minus: 1}} -->
+  </a>
+{% else %}
+  <a href="#" class="join-item btn btn-outline btn-disabled">
+    < Previous page
+  </a>
+{% endif %}
+  {% assign nextPageIndex = pagination.pageNumber | plus: 1 %}
+{% if nextPageIndex < pagination.hrefs.length %}
+  <a href="{{ pagination.hrefs[nextPageIndex] }}" class="join-item btn btn-outline">
+    Next page <!-- {{ pagination.pageNumber | plus: 1 }} --> >
+  </a>
+{% else %}
+  <a href="#" class="join-item btn btn-outline btn-disabled">
+    Next page >
+  </a>
+{% endif %}
+</div>
+      </div>
+</main>
+<div id="footer"></div>
+  <script src="/scripts/script.js"></script>
+  </body>
+</html>
