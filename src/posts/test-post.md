@@ -1,9 +1,9 @@
 ---
 layout: layouts/post.html
-title: "This is a test post, about something."
+title: "This is a test post, about something"
 date: "2025-05-02"
 tags: ['posts','product', 'product manager', 'product owner']
-description: "this a description of what the product owner role is accroding to Chat-GPT"
+description: "this a description of what the product owner role is accroding to Chat-GPT description description description description description "
 image: "https://placehold.co/1200x800"
 ---
 

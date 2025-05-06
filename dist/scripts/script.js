@@ -4,14 +4,14 @@ const headerHTML = `
 <nav>
 <div class="fixed z-100 navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="p-2 font-bold text-xl" href="/">Ben Startin</a>
+    <a class="p-2 font-bold text-xl" href="/">[B;S]</a>
   </div>
   <div class="dropdown dropdown-end">
     <div tabindex="0" role="button" class="btn btn-round btn-ghost">            
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
     </div>
     <ul tabindex="0" 
-    class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm text-md">
       <li><a href="/posts/">Posts</a></li>
       <li><a href="/about/">About</a></li>
       <li><a>Contact</a></li>
@@ -84,13 +84,13 @@ const footerHTML = `
   `;
 
 const riceHTML = `
-<div class="max-w-md mx-auto mt-20 mb-20 border border-gray-500 rounded-xl p-5">
+<div class=" mx-auto mt-20 mb-20 border border-gray-500 rounded-xl p-5">
   <h2 class="mb-4">RICE Calculator</h2>
 <fieldset class="fieldset border-solid">
   <legend class="fieldset-legend">What is the Reach?</legend>
         <span class="label">Roughly how many customers will the new feature reach per month?</span>
   <input type="number"
-  class="input validator w-full"
+  class="input validator"
   required
   placeholder="Type a number"
   min="1"
@@ -100,15 +100,15 @@ const riceHTML = `
 
   <legend class="fieldset-legend">What is the Impact?</legend>
           <span class="label ">What is the value of the feature you're building?</span>
-  <div class="w-full mb-5">
-  <input type="range" min="0" max="3" value="1" class="range w-full" step="1" id="impact" />
-  <div class="flex justify-between px-2.5 mt-2 text-xs w-full">
+  <div class=" mb-5">
+  <input type="range" min="0" max="3" value="1" class="range" step="1" id="impact" />
+  <div class="flex justify-between px-2.5 mt-2 text-xs">
     <span>|</span>
     <span>|</span>
     <span>|</span>
     <span>|</span>
   </div>
-  <div class="flex justify-between px-2.5 mt-2 text-xs w-full">
+  <div class="flex justify-between px-2.5 mt-2 text-xs">
     <span>No Impact</span>
     <span>Low</span>
     <span>Medium</span>
@@ -118,7 +118,7 @@ const riceHTML = `
 
   <legend class="fieldset-legend">What is your confidence?</legend>
     <span class="label">How confiident the feature will solve the issue you are facing?</span>
-      <select class="select select-primary w-full mb-5" id="confidence">
+      <select class="select select-primary mb-5" id="confidence">
         <option value="" disabled selected>Select an option</option>
              <option value="0.8">High confidence</option>
              <option value="0.5">Medium confidence</option>
@@ -127,7 +127,7 @@ const riceHTML = `
 
   <legend class="fieldset-legend ">What is the effort to build?</legend>
     <span class="label">How much effort will this feature take to build?</span>
-      <select class="select select-primary w-full mb-5" id="confidence">
+      <select class="select select-primary mb-5" id="confidence">
         <option value="" disabled selected>Select an option</option>
         <option value="3">7+ Sprints</option>
         <option value="2">5 > 6 Sprints</option>
@@ -140,6 +140,68 @@ const riceHTML = `
 </div>
   `;
 
+  const latestPostsHTML = `<div class="mx-auto max-w-3xl mt-10 mb-5 p-5">
+      <h2>Latest posts</h2>
+      <ul class="list bg-base-100 rounded-box shadow-sm">
+          
+        {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
+    {% if newestPost %}
+    <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
+          <div>
+            <div class="text-lg ">{{ newestPost.data.title }}<span class="text-xs text-gray-500"> // {{ newestPost.date | date: "%B %d, %Y" }}</span>
+          </div>
+            <div class="text-sm opacity-80">{{ newestPost.data.description | truncate: 120}}<span class="text-xs text-gray-500"> Read post</span></div>
+          </div>
+       </li> </a>
+        {% endif %}
+        
+        {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign secondNewestPost = sortedPosts[1] %}
+      {% if secondNewestPost %}
+    <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
+          <div>
+            <div class="text-lg">{{ secondNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
+              <div class="text-sm opacity-60">{{ secondNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+          </div>
+       </li> </a>
+        {% endif %}
+        
+        {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign thirdNewestPost = sortedPosts[2] %}
+      {% if thirdNewestPost %}
+    <a href="{{ thirdNewestPost.url }}" class="hover:underline"><li class="list-row">
+          <div>
+            <div class="text-lg ">{{ thirdNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ thirdNewestPost.date | date: "%B %d, %Y" }}</span>
+              <div class="text-sm opacity-60">{{ thirdNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+          </div>
+       </li> </a>
+        {% endif %}
+
+        {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign forthNewestPost = sortedPosts[3] %}
+      {% if forthNewestPost %}
+    <a href="{{ forthNewestPost.url }}" class="hover:underline"><li class="list-row">
+          <div>
+            <div class="text-lg ">{{ forthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ forthNewestPost.date | date: "%B %d, %Y" }}</span>
+              <div class="text-sm opacity-60">{{ forthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+          </div>
+       </li> </a>
+        {% endif %}
+
+        {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+      {% assign fifthNewestPost = sortedPosts[4] %}
+      {% if fifthNewestPost %}
+    <a href="{{ fifthNewestPost.url }}" class="hover:underline"><li class="list-row">
+          <div>
+            <div class="text-lg ">{{ fifthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ fifthNewestPost.date | date: "%B %d, %Y" }}</span>
+              <div class="text-sm opacity-60">{{ fifthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+          </div>
+       </li> </a>
+        {% endif %}
+        
+      </ul>
+    </div>
+  `;
 
   // Function to inject HTML into a selector
 function injectHTML(selector, htmlContent) {
@@ -154,7 +216,9 @@ function injectHTML(selector, htmlContent) {
 // Inject header and footer
 injectHTML('#header', headerHTML);
 injectHTML('#footer', footerHTML);  
-injectHTML('#rice', riceHTML);  
+injectHTML('#rice', riceHTML);
+injectHTML('#latestPosts', latestPostsHTML);
+
 
 // RICE calculator
 /*function riceCalculator() {
