@@ -1,7 +1,7 @@
 ---
 pagination:
   data: collections.posts
-  size: 4
+  size: 6
   alias: posts
   permalink: /posts{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/
   pagination.first: /posts/
@@ -33,28 +33,32 @@ pagination:
       </div>
       </div>
     <div class="max-w-2xl mx-auto mt-10 mb-15">
-        <!-- All Posts -->
+        <!-- All Posts Title -->
       <h2 class="text-3xl font-bold mb-5">All posts</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2">
-        {% for post in posts %}
-     <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-3">
+            <!-- Card layout -->
+
+  {% for post in posts %}
+     <div class="card w-auto image-full bg-base-100 card-lr shadow-sm mr-2 mb-3">
       {% if post.data.image %}
         <figure>
           <img
             src="{{ post.data.image }}"
             alt="{{ post.data.title }}"
-            class="mask-linear-50" />
+          />
         </figure>
         {% endif %}
-            <a href="{{ post.url }}"> 
+            
  <div class="card-body">
-          <h4 class="card-title">{{ post.data.title }}</h4>
-          <span class="text-gray-500 text-xs">{{ post.date | date: "%B %d, %Y" }}</span>
-          <p>{{ post.data.description | truncate: 120 }}</p>
-          <div class="justify-start card-actions">
-            <button class="btn">Read post</button>
-          </div>
-        </div>      </a>
+  <a href="{{ post.url }}">
+    <h4 class="card-title {% if post.data.image %}text-white{% endif %}">{{ post.data.title }}</h4>
+    <span class="text-xs {% if post.data.image %}text-white{% else %}text-gray-500{% endif %}">{{ post.date | date: "%B %d, %Y" }}</span>
+    <p class="{% if post.data.image %}text-white{% endif %}">{{ post.data.description | truncate: 120 }}</p>
+    <div class="justify-start card-actions">
+      <button class="btn">Read post</button>
+    </div>
+  </a>
+</div>    
 
       </div>
       {% endfor %}

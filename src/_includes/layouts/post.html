@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Ben Startin</title>
     <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image | default: 'https://placehold.co/600x400' }}">
+    <meta property="og:url" content="{{ post.url }}">
+
+    <link rel="canonical" href="{{ post.url }}">
 
     <link rel="stylesheet" href="/styles/index.css">
   </head>
@@ -25,10 +31,13 @@
 
       <article class="prose prose-lg pt-10">
         <h1 class="post">{{ title }}</h1>
+        <span class="text-sm text-gray-500"> // {{ date | date: "%B %d, %Y" }}</span>
+        <div id="sharing"></div>
         <hr class="w-full text-gray-100">
       {{ content }}
       <hr class="w-full text-gray-100">
       </article> 
+    
       <div class="mx-auto max-w-2xl mt-10 mb-5 p-5">
         <h3>Latest posts</h3>
         <ul class="list bg-base-100 rounded-box shadow-sm">
@@ -47,7 +56,7 @@
           {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
         {% assign secondNewestPost = sortedPosts[1] %}
         {% if secondNewestPost %}
-      <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
+      <a href="{{ secondNewestPost.url }}" class="hover:underline"><li class="list-row">
             <div>
               <div class="text-lg">{{ secondNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
                 <div class="text-sm opacity-60">{{ secondNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>

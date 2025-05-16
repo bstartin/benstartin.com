@@ -4,6 +4,7 @@ title: "this is a test post"
 date: "2025-04-14"
 tags: ['posts','product', 'product manager', 'product owner']
 description: "this a description of what the product owner role is accroding to Chat-GPT"
+image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
 ---
 
 # Introduction to Product Ownership

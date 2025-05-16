@@ -122,7 +122,7 @@
       {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
     {% assign secondNewestPost = sortedPosts[1] %}
     {% if secondNewestPost %}
-  <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
+  <a href="{{ secondNewestPost.url }}" class="hover:underline"><li class="list-row">
         <div>
           <div class="text-lg">{{ secondNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
             <div class="text-sm opacity-60">{{ secondNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
