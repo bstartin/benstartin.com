@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <nav>
     <div class="fixed z-100 navbar bg-base-100 shadow-sm">
       <div class="flex-1">
-        <a class="p-2 font-bold text-xl" href="/">[ BS ]</a>
+        <a class="pl-1 pr-1 pt-3 pb-3 font-semibold text-white text-xl bg-primary" href="/">[BS]</a>
       </div>
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-round btn-ghost">            
