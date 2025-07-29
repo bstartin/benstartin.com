@@ -28,6 +28,9 @@ export default function (eleventyConfig) {
   // Add passthrough copy for script.js
   eleventyConfig.addPassthroughCopy('./src/scripts/script.js');
 
+  // Add passthrough copy for images
+  eleventyConfig.addPassthroughCopy('./src/images');
+
   // Add a custom collection for posts
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").sort((a, b) => {
