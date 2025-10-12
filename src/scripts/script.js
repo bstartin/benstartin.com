@@ -25,24 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Sidebar content here -->
             <li class="text-xl"><a href="/posts/">Posts</a></li>
             <li class="text-xl"><a href="/about/">About</a></li>
-            <li class="text-xl"><a href="#">WSJF Calculator</a></li>
-            <li class="text-xl"><a href="#">RICE Calculator</a></li>
+            <!-- <li class="text-xl"><a href="#">WSJF Calculator</a></li>
+            <li class="text-xl"><a href="#">RICE Calculator</a></li> -->
             <!-- Example: Social icons for email, LinkedIn, and GitHub -->
 <div class="flex items-center space-x-4 pt-10">
   <!-- Email -->
-  <a href="mailto:your@email.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
+  <a href="mailto:ben.startin@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12l-4-4-4 4m8 0v6a2 2 0 002 2H6a2 2 0 01-2-2v-6m16-2a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2v-6z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.5 5L18 8m0 8H3V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
     </svg>
   </a>
   <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/benstartin/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
       <path d="M22.23 0H1.77C.79 0 0 .774 0 1.729v20.542C0 23.226.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.729V1.729C24 .774 23.21 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.452c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.112 13H17.1v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71h-3.56V9h3.42v1.56h.05c.48-.91 1.65-1.87 3.4-1.87 3.63 0 4.3 2.39 4.3 5.5v6.26z"/>
     </svg>
   </a>
   <!-- GitHub -->
-  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="GitHub">
+  <a href="https://github.com/bstartin" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="GitHub">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.418 2.865 8.167 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.091-.646.35-1.089.636-1.341-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .268.18.579.688.481C19.138 20.184 22 16.437 22 12.021 22 6.484 17.523 2 12 2z"/>
     </svg>
@@ -65,19 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Example: Social icons for email, LinkedIn, and GitHub -->
 <div class="flex items-center space-x-4">
   <!-- Email -->
-  <a href="mailto:your@email.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
+  <a href="mailto:ben.startin@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12l-4-4-4 4m8 0v6a2 2 0 002 2H6a2 2 0 01-2-2v-6m16-2a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2v-6z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.5 5L18 8m0 8H3V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
     </svg>
   </a>
   <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/benstartin/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
       <path d="M22.23 0H1.77C.79 0 0 .774 0 1.729v20.542C0 23.226.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.729V1.729C24 .774 23.21 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.452c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.112 13H17.1v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71h-3.56V9h3.42v1.56h.05c.48-.91 1.65-1.87 3.4-1.87 3.63 0 4.3 2.39 4.3 5.5v6.26z"/>
     </svg>
   </a>
   <!-- GitHub -->
-  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="GitHub">
+  <a href="https://github.com/bstartin" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="GitHub">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.418 2.865 8.167 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.091-.646.35-1.089.636-1.341-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .268.18.579.688.481C19.138 20.184 22 16.437 22 12.021 22 6.484 17.523 2 12 2z"/>
     </svg>
@@ -229,4 +229,18 @@ document.addEventListener('DOMContentLoaded', () => {
       riceCalculator();
     });
   }
+  // year calculator for about information
+  const startYear = 2011; // set your starting year here
+  const currentYear = new Date().getFullYear();
+  const yearsSince = Math.max(0, currentYear - startYear); // e.g. 2025 - 2013 = 12
+
+  const el = document.getElementById('yearText');
+  if (el) {
+    // show just the number of years
+    el.textContent = `${yearsSince}`;
+
+    // OR show nicer text, uncomment to use:
+    // el.textContent = yearsSince === 1 ? `${yearsSince} year` : `${yearsSince} years`;
+  }
+
 });
