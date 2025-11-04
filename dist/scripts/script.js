@@ -60,18 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
     <nav class="grid grid-flow-col gap-4">
       <a class="link link-hover" href="/about">About</a>
       <a class="link link-hover" href="/posts">Posts</a>
-      <a class="link link-hover">Contact</a>
     </nav>
     <!-- Example: Social icons for email, LinkedIn, and GitHub -->
 <div class="flex items-center space-x-4">
-  <!-- Email -->
+  <!-- 
   <a href="mailto:ben.startin@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.5 5L18 8m0 8H3V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
     </svg>
-  </a>
+  </a> Email -->
   <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/benstartin/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/bstartin/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">
       <path d="M22.23 0H1.77C.79 0 0 .774 0 1.729v20.542C0 23.226.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.729V1.729C24 .774 23.21 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.452c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.112 13H17.1v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71h-3.56V9h3.42v1.56h.05c.48-.91 1.65-1.87 3.4-1.87 3.63 0 4.3 2.39 4.3 5.5v6.26z"/>
     </svg>
