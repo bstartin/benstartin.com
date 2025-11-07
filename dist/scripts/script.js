@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a class="pl-2 pr-2 pt-3 pb-3 font-semibold black text-xl" href="/">Ben\\Startin</a>
       </div>
       <div class="dropdown dropdown-end">
-        
-    
-  
         <div class="drawer drawer-end">
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
@@ -29,12 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <li class="text-xl"><a href="#">RICE Calculator</a></li> -->
             <!-- Example: Social icons for email, LinkedIn, and GitHub -->
 <div class="flex items-center space-x-4 pt-10">
-  <!-- Email -->
-  <a href="mailto:ben.startin@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Email">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.5 5L18 8m0 8H3V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
-    </svg>
-  </a>
   <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/benstartin/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="LinkedIn">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="currentColor" viewBox="0 0 24 24">

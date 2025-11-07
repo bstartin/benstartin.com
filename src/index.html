@@ -6,26 +6,37 @@
   <title>Ben Startin - Product Manager</title>
   <meta name="description" content="A brief description of the webpage">
   <link rel="stylesheet" href="/styles/index.css"> <!-- Link to your CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
     <div id="header"></div>
-  <main>
-   <!-- Hero -->
-<div class="bg-white min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 py-24 gap-12">
-  <!-- Text Content -->
-  <div class="text-left max-w-2xl">
-    <h1 class="text-8xl md:text-8xl font-semibold tracking-tight text-gray-900 mb-6">
-    Birmingham-based digital product manager with experience across automotive, retail, sports, and telecoms industries.     
+<main>
+     <!-- Hero -->
+<container>
+  <div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="max-w-8xl">
+             <h1 class="hero font-semibold tracking-tight text-gray-900 mb-6"> Birmingham-based digital product manager with experience across automotive, retail, sports, and telecoms industries.</h1>
+<a href="/posts/"><button class="btn btn-primary py-5 text-md w-xs m-2">Read my posts</button></a> 
+<a href="/about/"><button class="btn btn-outline py-5 w-xs m-2">About me</button></a>    
+    </div>
+  </div>
+</div>
+  </container>
+<!-- About me & post link boxes
+<container>
+  <div class="bg-white min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 py-24 gap-12">
+       <div class="text-left max-w-2md left-0">
     <div class="mt-10 flex flex-col sm:flex-row gap-4">
        <div class="flex-1 bg-gradient-to-r from-gray-50 to-white-100/50 rounded-3xl p-5 sm:p-5 border border-gray-200 shadow-sm">
  <h4 class="text-2xl font-semibold mb-4">Latest posts</h4>
         <p class="text-md font-normal"> Read about my learnings from my years working in product .
         </p>
       <a href="/posts/">
-        <button class="btn btn-primary py-5 text-md w-full">
-          Read my posts
-        </button>
+        <button class="btn btn-primary py-5 text-md w-full">Read my posts</button>
       </a>
        </div>
  <div class="flex-1 bg-gradient-to-r from-gray-50 to-white-100/50 rounded-3xl p-5 sm:p-5 border border-gray-200 shadow-sm">
@@ -39,15 +50,18 @@
  </div>
     </div>
   </div>
-
-  <!-- Optional Imagery -->
+-->
+  <!-- Optional 
   <div class="w-full p-5 m-5">
   <img src="/images/Designer-Desk-2--Streamline-Free-Illustrations.svg" alt="Product thinking illustration" class="w-full m-0 p-0 block">
 </div>
+
 </div>
+Imagery -->
+</container>   
 
 <container class="">
-<!-- Links to Calculators  
+<!-- Links to Calculators 
  <div class="mx-auto max-w-3xl mt-10 mb-5 p-5">
  <div class="bg-gradient-to-r from-gray-50 to-white-100/50 rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-lg">
               <div class="text-center">
@@ -74,146 +88,16 @@
             </div>
           </div>
   
-</div>-->  
+</div> --> 
+</container>
 
-<!-- latest posts
-<div class="max-w-3xl mx-auto mb-10 p-3">
-  <h2>Latest posts</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-3">
-    {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
-    {% if newestPost %}
-    <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
-        <figure>
-          <img
-            src="{{ newestPost.data.image | default: 'https://placehold.co/600x400' }}"
-            alt="{{ newestPost.data.title }}" />
-        </figure>
-        <a href="{{ newestPost.url }}"><div class="card-body">
-          <h4 class="card-title text-lg">{{ newestPost.data.title }}</h4>
-          <span class="text-gray-500 text-xs">{{ newestPost.date | date: "%B %d, %Y" }}</span>
-          <p>{{ newestPost.data.description }}</p>
-          <div class="justify-start card-actions">
-            <button class="btn btn-outline">Read post</button>
-          </div>
-        </div></a>
-      </div>
-    {% endif %}
-
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-      {% assign secondNewestPost = sortedPosts[1] %}
-      {% if secondNewestPost %}
-        <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
-          <figure>
-            <img
-              src="{{ secondNewestPost.data.image | default: 'https://placehold.co/600x400' }}"
-              alt="{{ secondNewestPost.data.title }}" class="mask-linear-50"/>
-          </figure>
-          <div class="card-body">
-            <h4 class="card-title">{{ secondNewestPost.data.title }}</h4>
-            <span class="text-gray-500 text-xs">{{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
-            <p>{{ secondNewestPost.data.description }}</p>
-            <div class="justify-start card-actions">
-              <a href="{{ secondNewestPost.url }}"><button class="btn btn-outline">Read post</button></a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-      {% assign thirdNewestPost = sortedPosts[2] %}
-      {% if thirdNewestPost %}
-        <div class="card w-auto bg-base-100 card-lr shadow-sm mr-2 mb-2">
-          <figure>
-            <img
-              src="{{ thirdNewestPost.data.image | default: 'https://placehold.co/600x400' }}"
-              alt="{{ thirdNewestPost.data.title }}" />
-          </figure>
-          <div class="card-body">
-            <h4 class="card-title">{{ thirdNewestPost.data.title }}</h4>
-            <span class="text-gray-500 text-xs">{{ thirdNewestPost.date | date: "%B %d, %Y" }}</span>
-            <p>{{ thirdNewestPost.data.description }}</p>
-            <div class="justify-start card-actions">
-              <a href="{{ thirdNewestPost.url }}"><button class="btn btn-outline">Read post</button></a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-        </div>
-        <div class="py-8 text-center">
-          <a href="/posts/"><button class="btn py-4 ">View all posts</button></a>
-        </div>
-    </div>
-  -->
+<container class="">
     <!-- Latest posts section -->
-  <div class="mx-auto max-w-3xl mt-10 mb-5 p-5">
+<div class="mx-auto max-w-3xl m-5 pt-10 pb-20">
     <h2>Latest posts</h2>
-    <ul class="list bg-base-100 rounded-box shadow-sm">
-        
-      {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
-  {% if newestPost %}
-  <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
-        <div>
-          <div class="text-lg ">{{ newestPost.data.title }}<span class="text-xs text-gray-500"> // {{ newestPost.date | date: "%B %d, %Y" }}</span>
-        </div>
-          <div class="text-sm opacity-80">{{ newestPost.data.description | truncate: 120}}<span class="text-xs text-gray-500"> Read post</span></div>
-        </div>
-     </li> </a>
-      {% endif %}
-      
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-    {% assign secondNewestPost = sortedPosts[1] %}
-    {% if secondNewestPost %}
-  <a href="{{ secondNewestPost.url }}" class="hover:underline"><li class="list-row">
-        <div>
-          <div class="text-lg">{{ secondNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
-            <div class="text-sm opacity-60">{{ secondNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
-        </div>
-     </li> </a>
-      {% endif %}
-      
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-    {% assign thirdNewestPost = sortedPosts[2] %}
-    {% if thirdNewestPost %}
-  <a href="{{ thirdNewestPost.url }}" class="hover:underline"><li class="list-row">
-        <div>
-          <div class="text-lg ">{{ thirdNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ thirdNewestPost.date | date: "%B %d, %Y" }}</span>
-            <div class="text-sm opacity-60">{{ thirdNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
-        </div>
-     </li> </a>
-      {% endif %}
-
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-    {% assign forthNewestPost = sortedPosts[3] %}
-    {% if forthNewestPost %}
-  <a href="{{ forthNewestPost.url }}" class="hover:underline"><li class="list-row">
-        <div>
-          <div class="text-lg ">{{ forthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ forthNewestPost.date | date: "%B %d, %Y" }}</span>
-            <div class="text-sm opacity-60">{{ forthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
-        </div>
-     </li> </a>
-      {% endif %}
-
-      {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
-    {% assign fifthNewestPost = sortedPosts[4] %}
-    {% if fifthNewestPost %}
-  <a href="{{ fifthNewestPost.url }}" class="hover:underline"><li class="list-row">
-        <div>
-          <div class="text-lg ">{{ fifthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ fifthNewestPost.date | date: "%B %d, %Y" }}</span>
-            <div class="text-sm opacity-60">{{ fifthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
-        </div>
-     </li> </a>
-      {% endif %}
-      
-    </ul>
-  </div>
-  <br>
-  <br>
-    
-<!-- Latest posts section
-  <div class="mx-auto max-w-3xl mt-10 mb-5 p-5">
-    <h2>Latest posts</h2>
-    <ul class="list bg-base-100 rounded-box shadow-sm">
-      {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
+        <ul class="list bg-base-100 rounded-box shadow-sm">
+            
+          {% assign newestPost = collections.posts | sort: "date" | reverse | first %}
       {% if newestPost %}
       <a href="{{ newestPost.url }}" class="hover:underline"><li class="list-row">
             <div>
@@ -222,25 +106,60 @@
               <div class="text-sm opacity-80">{{ newestPost.data.description | truncate: 120}}<span class="text-xs text-gray-500"> Read post</span></div>
             </div>
          </li> </a>
-      {% endif %}
-      …
-    </ul>
+          {% endif %}
+          
+          {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+        {% assign secondNewestPost = sortedPosts[1] %}
+        {% if secondNewestPost %}
+      <a href="{{ secondNewestPost.url }}" class="hover:underline"><li class="list-row">
+            <div>
+              <div class="text-lg">{{ secondNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ secondNewestPost.date | date: "%B %d, %Y" }}</span>
+                <div class="text-sm opacity-60">{{ secondNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+            </div>
+         </li> </a>
+          {% endif %}
+          
+          {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+        {% assign thirdNewestPost = sortedPosts[2] %}
+        {% if thirdNewestPost %}
+      <a href="{{ thirdNewestPost.url }}" class="hover:underline"><li class="list-row">
+            <div>
+              <div class="text-lg ">{{ thirdNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ thirdNewestPost.date | date: "%B %d, %Y" }}</span>
+                <div class="text-sm opacity-60">{{ thirdNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+            </div>
+         </li> </a>
+          {% endif %}
+       {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+        {% assign forthNewestPost = sortedPosts[3] %}
+        {% if forthNewestPost %}
+      <a href="{{ forthNewestPost.url }}" class="hover:underline"><li class="list-row">
+            <div>
+              <div class="text-lg ">{{ forthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ forthNewestPost.date | date: "%B %d, %Y" }}</span>
+                <div class="text-sm opacity-60">{{ forthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+            </div>
+         </li> </a>
+          {% endif %}
+          {% assign sortedPosts = collections.posts | sort: "date" | reverse %}
+        {% assign fifthNewestPost = sortedPosts[4] %}
+        {% if fifthNewestPost %}
+      <a href="{{ fifthNewestPost.url }}" class="hover:underline"><li class="list-row">
+            <div>
+              <div class="text-lg ">{{ fifthNewestPost.data.title }}<span class="text-xs text-gray-500"> // {{ fifthNewestPost.date | date: "%B %d, %Y" }}</span>
+                <div class="text-sm opacity-60">{{ fifthNewestPost.data.description | truncate: 120 }}<span class="text-xs text-gray-500"> Read post</span></div>
+            </div>
+         </li> </a>
+          {% endif %}   
+        </ul>
+      </div>  
   </div>
-</div>
- -->
+</container>
+</main>
 
+<!-- Footer -->
+<div id="footer"></div>
 
-<br>
-<br>
-<br>
-        <!-- Content section -->
-      </container>
-      </main>
-
-  <!-- Footer -->
-  <div id="footer"></div>
-
-  <script src="/scripts/script.js"></script>
+<!-- scripts -->
+<script src="/scripts/script.js"></script>
 
 </body>
 </html>
